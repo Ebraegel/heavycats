@@ -25,3 +25,18 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+//task buildUiAssets(type:Exec) {
+//	workingDir '../ui'
+//	commandLine 'sh', '-c', 'yarn install && yarn build'
+//}
+//
+//task copyUiAssets(type: Copy) {
+//	dependsOn buildUiAssets
+//
+//	from file("../ui/build")
+//	into file("./src/main/resources/public")
+//}
+//
+//// Add the UI build step to the standard `build` & `test` tasks
+//processResources.dependsOn copyUiAssets

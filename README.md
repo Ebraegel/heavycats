@@ -12,6 +12,7 @@ Mainly an excuse to mess around with Spring MVC.
 ```
 docker-compose up -d
 ./gradlew bootRun
+yarn start
 ```
 
 ## Use
