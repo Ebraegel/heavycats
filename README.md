@@ -29,6 +29,9 @@ curl -XPOST -H 'content-type: application/json' localhost:8080/cats/1/weights -d
 
 # Get a cat's weight history
 curl localhost:8080/cats/1/weights
+
+# Connect to the database
+docker-compose exec db mysql --user heavycats heavycats --password
 ```
 
 ## TODO

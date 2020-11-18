@@ -4,7 +4,6 @@ import com.ebraegel.heavycats.jpa.repository.CatRepository;
 import com.ebraegel.heavycats.jpa.repository.WeightRepository;
 import com.ebraegel.heavycats.model.Weight;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
