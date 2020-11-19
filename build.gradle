@@ -15,7 +15,8 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    implementation 'junit:junit:4.12'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	runtimeOnly 'mysql:mysql-connector-java'
 	implementation "org.springframework.boot:spring-boot-starter-data-jpa"
@@ -25,18 +26,3 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
-
-//task buildUiAssets(type:Exec) {
-//	workingDir '../ui'
-//	commandLine 'sh', '-c', 'yarn install && yarn build'
-//}
-//
-//task copyUiAssets(type: Copy) {
-//	dependsOn buildUiAssets
-//
-//	from file("../ui/build")
-//	into file("./src/main/resources/public")
-//}
-//
-//// Add the UI build step to the standard `build` & `test` tasks
-//processResources.dependsOn copyUiAssets

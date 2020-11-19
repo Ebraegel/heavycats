@@ -24,9 +24,22 @@ export default function Cats(props) {
             const response = await axios.post('/cats', { name: catName.trim() })
             if (response.status) {
                 getCats();
+                setCatName("");
             }
         } catch (err) {
             alert('Error - cat could not be added!');
+        }
+    }
+
+    const deleteCat = async (id) => {
+        console.log(`deleting cat id ${id}`)
+        try {
+            const response = await axios.delete(`/cats/${id}`)
+            if (response.status) {
+                getCats();
+            }
+        } catch (err) {
+            alert('Error - cat could not be deleted!');
         }
     }
 
@@ -59,6 +72,7 @@ export default function Cats(props) {
                                         <tr key={cat.id}>
                                             <td>{cat.id}</td>
                                             <td><a href={`/ui/cats/${cat.id}`}>{cat.name}</a></td>
+                                            <td><button onClick={() => deleteCat(cat.id)}>Delete</button></td>
                                         </tr>
                                     )
                                 })
